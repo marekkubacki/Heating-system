@@ -1,7 +1,7 @@
 The application is accessible at:
 
 ➡️ https://pi.kubacki.nohost.me
-
+ 
 
 This repository contains a complete implementation of a remote heating control system based on a Raspberry Pi 3B.
 The application allows the user to remotely enable or disable a central heating pump, monitor usage statistics, and manage automatic shutdown parameters.
