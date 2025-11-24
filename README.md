@@ -39,25 +39,23 @@ The system consists of two main layers:
   This separation ensures that even if the website becomes temporarily unavailable, the Python controller continues to maintain correct system behavior at all times.
 
 📁 Repository Structure
+  
+  ├── index.php -  Main user interface (login, control panel, stats, calendar)
+  
+  ├── admin.php - Administrator panel (resetting stats, viewing JSON data)
 
-  / (root)
+  ├── sterowanie.py - Core controller handling GPIO and logic
+
+  ├── dane.json - Main system state (on/off, counters, configuration)
   
+  ├── kalendarz.json - Daily usage statistics
   
-  ├── index.php                   # Main user interface (login, control panel, stats, calendar)
+  ├── czysty_kalendarz.json - Template used for resetting yearly stats
   
-  ├── admin.php                   # Administrator panel (resetting stats, viewing JSON data)
-  │
-  ├── sterowanie.py               # Core controller handling GPIO and logic
+  ├── proby.json - Stores failed login attempts (security subsystem)
   
-  │
-  ├── dane.json                   # Main system state (on/off, counters, configuration)
-  
-  ├── kalendarz.json         # Daily usage statistics
-  ├── czysty_kalendarz.json  # Template used for resetting yearly stats
-  ├── proby.json             # Stores failed login attempts (security subsystem)
-  │
-  ├── style.css              # UI styling for the web application
-  └── README.md              # This file
+  ├── style.css - UI styling for the web application
+
 
 ⚙️ How It Works
  
