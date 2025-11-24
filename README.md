@@ -55,6 +55,7 @@ The system consists of two main layers:
   └── README.md              # This file
 
 ⚙️ How It Works
+ 
  🔌 Physical Layer
   
   Raspberry Pi controls a relay via GPIO.
@@ -64,6 +65,7 @@ The system consists of two main layers:
   The Python script sets GPIO pins as output (ON) or input (OFF) to ensure stable behavior.
   
   System restarts automatically after a blackout.
+
 
 🧠 Logic Layer
 
@@ -80,6 +82,7 @@ The system consists of two main layers:
   applies auto-off logic,
   
   saves daily statistics to calendar.
+
 
 🛡️ Security
 
