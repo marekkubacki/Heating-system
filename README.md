@@ -41,12 +41,16 @@ The system consists of two main layers:
 📁 Repository Structure
   / (root)
   │
+  
   ├── index.php              # Main user interface (login, control panel, stats, calendar)
+  
   ├── admin.php              # Administrator panel (resetting stats, viewing JSON data)
   │
   ├── sterowanie.py          # Core controller handling GPIO and logic
+  
   │
   ├── dane.json              # Main system state (on/off, counters, configuration)
+  
   ├── kalendarz.json         # Daily usage statistics
   ├── czysty_kalendarz.json  # Template used for resetting yearly stats
   ├── proby.json             # Stores failed login attempts (security subsystem)
