@@ -14,47 +14,47 @@ The system consists of two main layers:
 
 1. Web Layer (PHP)
   
-  Provides the user interface.
-  
-  Handles password-based access control.
-  
-  Displays current heating status, statistics, counters, and calendar.
-  
-  Writes user commands and configuration changes into JSON files.
+   Provides the user interface.
+   
+   Handles password-based access control.
+   
+   Displays current heating status, statistics, counters, and calendar.
+   
+   Writes user commands and configuration changes into JSON files.
 
 2. Control Layer (Python)
 
-  Runs continuously on the Raspberry Pi.
-  
-  Reads operational data from dane.json.
-  
-  Directly controls GPIO pins connected to the relay module.
-  
-  Updates counters and daily usage statistics.
-  
-  Performs automatic shutdowns based on configured limits.
-  
-  Restarts automatically with the system.
-  
-  This separation ensures that even if the website becomes temporarily unavailable, the Python controller continues to maintain correct system behavior at all times.
+   Runs continuously on the Raspberry Pi.
+   
+   Reads operational data from dane.json.
+   
+   Directly controls GPIO pins connected to the relay module.
+   
+   Updates counters and daily usage statistics.
+   
+   Performs automatic shutdowns based on configured limits.
+   
+   Restarts automatically with the system.
+   
+   This separation ensures that even if the website becomes temporarily unavailable, the Python controller continues to maintain correct system behavior at all times.
 
 📁 Repository Structure
   
-  ├── index.php -  Main user interface (login, control panel, stats, calendar)
+  ├── index.php ---  Main user interface (login, control panel, stats, calendar)
   
-  ├── admin.php - Administrator panel (resetting stats, viewing JSON data)
+  ├── admin.php --- Administrator panel (resetting stats, viewing JSON data)
 
-  ├── sterowanie.py - Core controller handling GPIO and logic
+  ├── sterowanie.py --- Core controller handling GPIO and logic
 
-  ├── dane.json - Main system state (on/off, counters, configuration)
+  ├── dane.json --- Main system state (on/off, counters, configuration)
   
-  ├── kalendarz.json - Daily usage statistics
+  ├── kalendarz.json --- Daily usage statistics
   
-  ├── czysty_kalendarz.json - Template used for resetting yearly stats
+  ├── czysty_kalendarz.json --- Template used for resetting yearly stats
   
-  ├── proby.json - Stores failed login attempts (security subsystem)
+  ├── proby.json --- Stores failed login attempts (security subsystem)
   
-  ├── style.css - UI styling for the web application
+  ├── style.css --- UI styling for the web application
 
 
 ⚙️ How It Works
